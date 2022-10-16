@@ -1,0 +1,70 @@
+:root {
+  --primary-color-text: #757575;
+  --secondary-color-text: #212121;
+  --primary-fone-page: #ffffff;
+  --secondary-fone-page: #f5f4fa;
+  --tertiary-fone-page: #2f303a;
+  --accent-color: #2196f3;
+  --tertiary-color-text: #ffffff;
+}
+
+/* Найпопулярніший колір тексту */
+body {
+  color: var(--primary-color-text);
+}
+/* прибираю підкреслення у всіх посилань */
+a {
+  text-decoration: none;
+}
+/* прибираю маркерування списків */
+li {
+  list-style-type: none;
+  /* ХЕДЕР */
+}
+/* колір тексту навігації */
+.nav-link {
+  color: var(--secondary-color-text);
+}
+/* колір тексту контактів */
+.contact-link {
+  color: var(--primary-color-text);
+}
+/* зміна кольорів при фокусі та ховері */
+.contact-link:hover,
+.contact-link:focus,
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+/*  ГЕРОЙ */
+.hero {
+  background-color: var(--tertiary-fone-page);
+}
+
+h1 {
+  color: var(--tertiary-color-text);
+}
+button {
+  color: var(--tertiary-color-text);
+  background-color: var(--accent-color);
+}
+/* Назви секцій */
+.section-title {
+  color: var(--secondary-color-text);
+}
+
+.section-stuff {
+  background-color: var(--secondary-fone-page);
+}
+
+footer {
+  background-color: var(--tertiary-fone-page);
+}
+
+a[href="http://surl.li/bjvcs"]
+{
+  color: var(--tertiary-color-text);
+}
+.footer-contact {
+  color: rgba(255, 255, 255, 0.6);
+}
