@@ -1,14 +1,14 @@
 :root {
   --primary-color-text: #757575;
   --secondary-color-text: #212121;
-  --primary-fone-page: #ffffff;
-  --secondary-fone-page: #f5f4fa;
-  --tertiary-fone-page: #2f303a;
+  --primary-background-page: #ffffff;
+  --secondary-background-page: #f5f4fa;
+  --tertiary-background-page: #2f303a;
   --accent-color: #2196f3;
   --tertiary-color-text: #ffffff;
 }
 
-/* Найпопулярніший колір тексту */
+/* ЗАГАЛЬНІ НАЛАШТУВАННЯ */
 body {
   color: var(--primary-color-text);
 }
@@ -19,7 +19,14 @@ a {
 /* прибираю маркерування списків */
 li {
   list-style-type: none;
-  /* ХЕДЕР */
+}
+
+/* ХЕДЕР */
+.logo {
+  color: #000000;
+}
+.logo > span {
+  color: var(--accent-color);
 }
 /* колір тексту навігації */
 .nav-link {
@@ -29,18 +36,18 @@ li {
 .contact-link {
   color: var(--primary-color-text);
 }
-/* зміна кольорів при фокусі та ховері */
+/* зміна кольорів при фокусі і ховері */
 .contact-link:hover,
 .contact-link:focus,
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
 }
+
 /*  ГЕРОЙ */
 .hero {
-  background-color: var(--tertiary-fone-page);
+  background-color: var(--tertiary-background-page);
 }
-
 h1 {
   color: var(--tertiary-color-text);
 }
@@ -48,22 +55,25 @@ button {
   color: var(--tertiary-color-text);
   background-color: var(--accent-color);
 }
-/* Назви секцій */
+
+/* СЕКЦІЇ */
 .section-title {
   color: var(--secondary-color-text);
 }
-
-.section-stuff {
-  background-color: var(--secondary-fone-page);
+.section-staff {
+  background-color: var(--secondary-background-page);
 }
 
+/* ФУТЕР */
 footer {
-  background-color: var(--tertiary-fone-page);
+  background-color: var(--tertiary-background-page);
 }
-
-a[href="http://surl.li/bjvcs"]
-{
+a[href="http://surl.li/bjvcs"],
+.logo-footer {
   color: var(--tertiary-color-text);
+}
+.span-footer {
+  color: var(--accent-color);
 }
 .footer-contact {
   color: rgba(255, 255, 255, 0.6);
