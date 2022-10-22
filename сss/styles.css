@@ -51,7 +51,7 @@ li {
 h1 {
   color: var(--tertiary-color-text);
 }
-button {
+.button-activ {
   color: var(--tertiary-color-text);
   background-color: var(--accent-color);
 }
@@ -60,7 +60,8 @@ button {
 .section-title {
   color: var(--secondary-color-text);
 }
-.section-staff {
+.section-staff,
+.div-button {
   background-color: var(--secondary-background-page);
 }
 
@@ -77,4 +78,11 @@ a[href="http://surl.li/bjvcs"],
 }
 .footer-contact {
   color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* сторінка "Студія" */
+.div-button:hover,
+.div-button:focus {
+  background-color: var(--accent-color);
 }
