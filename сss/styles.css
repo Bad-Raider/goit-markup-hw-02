@@ -1,14 +1,16 @@
 :root {
   --primary-color-text: #757575;
   --secondary-color-text: #212121;
+  --tertiary-color-text: #ffffff;
+  --fourth-color-text: #000000;
   --primary-background-page: #ffffff;
   --secondary-background-page: #f5f4fa;
   --tertiary-background-page: #2f303a;
   --accent-color: #2196f3;
-  --tertiary-color-text: #ffffff;
   --primary-line-height: 1.2;
   --primary-font-weight: 500;
   --secondary-font-weight: 700;
+  --primary-font-size: 16px;
 }
 
 
@@ -16,10 +18,11 @@
 
 body {
   color: var(--primary-color-text);
+  background-color: var(--primary-background-page);
 /* фон і текст */
   font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  /* font-style: normal;
+  font-weight: 400; */
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -32,6 +35,29 @@ a {
 li {
   list-style-type: none;
 }
+/* прибираю непотрібні заголовки */
+.visually-hidden {
+  position: absolute;
+   white-space: nowrap;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   clip-path: inset(50%);
+   margin: -1px;
+ }
+/* підсвітка активної сторінки */
+ .nav-link.current  {
+  color: var(--accent-color);
+}
+/* Кнопки */
+.button-item,
+.button-activ {
+  cursor: pointer;
+  font-family: inherit;
+}
 
 
 /* ________________ХЕДЕР_________________ */
@@ -39,11 +65,11 @@ li {
 /* Логотип */
 .logo,
 .logo-span {
-  color: #000000;
+  color: var(--fourth-color-text);
   font-family: Raleway, sans-serif;
 font-weight: var(--secondary-font-weight);
 font-size: 26px;
-line-height: var (--primary-line-height);
+line-height: var(--primary-line-height);
 }
 .logo-span {
   color: var(--accent-color);
@@ -54,7 +80,7 @@ line-height: var (--primary-line-height);
   color: var(--secondary-color-text);
 
 font-weight: var(--primary-font-weight);
-line-height: var (--primary-line-height);
+line-height: var(--primary-line-height);
 letter-spacing: 0.02em;
 }
 
@@ -62,13 +88,15 @@ letter-spacing: 0.02em;
 .contact-link {
   color: var(--primary-color-text);
   font-weight: var(--primary-font-weight);
-  line-height: var (--primary-line-height);
+  line-height: var(--primary-line-height);
   letter-spacing: 0.02em;
 }
 
 /* зміна кольорів при фокусі і ховері */
 .contact-link:hover,
 .contact-link:focus,
+.footer-contact:hover,
+.footer-contact:focus,
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
@@ -92,15 +120,21 @@ text-transform: uppercase;
 .button-activ {
   color: var(--tertiary-color-text);
   background-color: var(--accent-color);
+  font-weight: var(--secondary-font-weight);
+  font-family: inherit;
+  line-height: 1.9;
+
+
 }
 
 /* ________________СЕКЦІЇ____________________ */
 
 .section-title {
   color: var(--secondary-color-text);
-  
+  /* якщо я його приберу фонд-сайз він не успадкується від боді */
+font-size: 14px;
 font-weight: var(--secondary-font-weight);
-line-height: var (--primary-line-height);
+line-height: var(--primary-line-height);
 text-transform: uppercase;
 }
 
@@ -111,7 +145,7 @@ text-transform: uppercase;
 
 font-weight: var(--secondary-font-weight);
 font-size: 36px;
-line-height: var (--primary-line-height);
+line-height: var(--primary-line-height);
 text-align: center;
 }
 
@@ -119,17 +153,16 @@ text-align: center;
   color: var(--secondary-color-text);
 
 font-weight: var(--primary-font-weight);
-font-size: 16px;
-line-height: var (--primary-line-height);
+font-size: var(--primary-font-size);
+line-height: var(--primary-line-height);
 }
 
 .staff-name {
-  font-size: 16px;
-  line-height: var (--primary-line-height);
+  font-size: var(--primary-font-size);
+  line-height: var(--primary-line-height);
 }
 
-.section-staff,
-.div-button {
+.section-staff {
   background-color: var(--secondary-background-page);
 }
 
@@ -144,7 +177,7 @@ footer {
   font-family: Raleway, sans-serif;
 font-weight: var(--secondary-font-weight);
 font-size: 26px;
-line-height: var (--primary-line-height);
+line-height: var(--primary-line-height);
 }
 .logo-span {
   color: var(--accent-color);
@@ -160,11 +193,7 @@ line-height: var (--primary-line-height);
 .footer-contact {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
 }
-
 
 
 /* _________________сторінка "Студія"__________________ */
@@ -178,7 +207,7 @@ line-height: var (--primary-line-height);
 /* фільтр контента */
 .button-list {
 font-weight: var(--primary-font-weight);
-font-size: 16px;
+font-size: var(--primary-font-size);
 line-height: 1.6;
 }
 
@@ -192,6 +221,6 @@ line-height: 2;
 letter-spacing: 0.06em;
 }
 .progects-text {
-  font-size: 16px;
+  font-size: var(--primary-font-size);
 line-height: 1.9;
 }
