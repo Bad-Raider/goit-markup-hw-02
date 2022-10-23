@@ -6,11 +6,23 @@
   --tertiary-background-page: #2f303a;
   --accent-color: #2196f3;
   --tertiary-color-text: #ffffff;
+  --primary-line-height: 1.2;
+  --primary-font-weight: 500;
+  --secondary-font-weight: 700;
 }
 
-/* ЗАГАЛЬНІ НАЛАШТУВАННЯ */
+
+/* __________ЗАГАЛЬНІ НАЛАШТУВАННЯ________________ */
+
 body {
   color: var(--primary-color-text);
+/* фон і текст */
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 }
 /* прибираю підкреслення у всіх посилань */
 a {
@@ -21,21 +33,39 @@ li {
   list-style-type: none;
 }
 
-/* ХЕДЕР */
-.logo {
+
+/* ________________ХЕДЕР_________________ */
+
+/* Логотип */
+.logo,
+.logo-span {
   color: #000000;
+  font-family: Raleway, sans-serif;
+font-weight: var(--secondary-font-weight);
+font-size: 26px;
+line-height: var (--primary-line-height);
 }
-.logo > span {
+.logo-span {
   color: var(--accent-color);
 }
-/* колір тексту навігації */
+
+/* Наавігація*/
 .nav-link {
   color: var(--secondary-color-text);
+
+font-weight: var(--primary-font-weight);
+line-height: var (--primary-line-height);
+letter-spacing: 0.02em;
 }
-/* колір тексту контактів */
+
+/* Контакти */
 .contact-link {
   color: var(--primary-color-text);
+  font-weight: var(--primary-font-weight);
+  line-height: var (--primary-line-height);
+  letter-spacing: 0.02em;
 }
+
 /* зміна кольорів при фокусі і ховері */
 .contact-link:hover,
 .contact-link:focus,
@@ -44,45 +74,124 @@ li {
   color: var(--accent-color);
 }
 
-/*  ГЕРОЙ */
+/*  ______________ГЕРОЙ_________________ */
 .hero {
   background-color: var(--tertiary-background-page);
 }
 h1 {
   color: var(--tertiary-color-text);
+
+  font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
 }
 .button-activ {
   color: var(--tertiary-color-text);
   background-color: var(--accent-color);
 }
 
-/* СЕКЦІЇ */
+/* ________________СЕКЦІЇ____________________ */
+
 .section-title {
   color: var(--secondary-color-text);
+  
+font-weight: var(--secondary-font-weight);
+line-height: var (--primary-line-height);
+text-transform: uppercase;
 }
+
+.section-title-progect,
+.section-title-staff
+ {
+  color: var(--secondary-color-text);
+
+font-weight: var(--secondary-font-weight);
+font-size: 36px;
+line-height: var (--primary-line-height);
+text-align: center;
+}
+
+.section-title-staff-name {
+  color: var(--secondary-color-text);
+
+font-weight: var(--primary-font-weight);
+font-size: 16px;
+line-height: var (--primary-line-height);
+}
+
+.staff-name {
+  font-size: 16px;
+  line-height: var (--primary-line-height);
+}
+
 .section-staff,
 .div-button {
   background-color: var(--secondary-background-page);
 }
 
-/* ФУТЕР */
+/* _______________ФУТЕР__________________ */
 footer {
   background-color: var(--tertiary-background-page);
 }
-a[href="http://surl.li/bjvcs"],
-.logo-footer {
+/* логотип */
+.logo-footer,
+.logo-span {
   color: var(--tertiary-color-text);
+  font-family: Raleway, sans-serif;
+font-weight: var(--secondary-font-weight);
+font-size: 26px;
+line-height: var (--primary-line-height);
 }
-.span-footer {
+.logo-span {
   color: var(--accent-color);
 }
+
+/* адреса футера */
+.address-post {
+  color: var(--tertiary-color-text);
+  font-style: normal;
+}
+
+/* контакти футера */
 .footer-contact {
   color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 
-/* сторінка "Студія" */
-.div-button:hover,
-.div-button:focus {
+
+/* _________________сторінка "Студія"__________________ */
+.button-item:hover,
+.button-item:focus {
   background-color: var(--accent-color);
+  color: var(--tertiary-color-text);
+}
+
+
+/* фільтр контента */
+.button-list {
+font-weight: var(--primary-font-weight);
+font-size: 16px;
+line-height: 1.6;
+}
+
+/* Проєкти */
+.progects-subtitle {
+  color:  var(--secondary-color-text);
+
+font-weight: var(--secondary-font-weight);
+font-size: 18px;
+line-height: 2;
+letter-spacing: 0.06em;
+}
+.progects-text {
+  font-size: 16px;
+line-height: 1.9;
 }
