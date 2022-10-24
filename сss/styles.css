@@ -8,6 +8,7 @@
   --tertiary-background-page: #2f303a;
   --accent-color: #2196f3;
   --primary-line-height: 1.2;
+  --secondary-line-height: 1.7;
   --primary-font-weight: 500;
   --secondary-font-weight: 700;
   --primary-font-size: 16px;
@@ -21,10 +22,7 @@ body {
   background-color: var(--primary-background-page);
 /* фон і текст */
   font-family: Roboto, sans-serif;
-  /* font-style: normal;
-  font-weight: 400; */
   font-size: 14px;
-  line-height: 1.7;
   letter-spacing: 0.03em;
 }
 /* прибираю підкреслення у всіх посилань */
@@ -121,9 +119,9 @@ text-transform: uppercase;
   color: var(--tertiary-color-text);
   background-color: var(--accent-color);
   font-weight: var(--secondary-font-weight);
-  font-family: inherit;
+  font-size: var(--primary-font-size);
   line-height: 1.9;
-
+  letter-spacing: 0.06em;
 
 }
 
@@ -134,7 +132,7 @@ text-transform: uppercase;
   /* якщо я його приберу фонд-сайз він не успадкується від боді */
 font-size: 14px;
 font-weight: var(--secondary-font-weight);
-line-height: var(--primary-line-height);
+line-height: var(--secondary-line-height);
 text-transform: uppercase;
 }
 
@@ -199,15 +197,17 @@ line-height: var(--primary-line-height);
 .button-item:hover,
 .button-item:focus {
   background-color: var(--accent-color);
-  color: var(--tertiary-color-text);
+  color: var(--secondary-background-page);
 }
 
 
 /* фільтр контента */
-.button-list {
+.button-item {
 font-weight: var(--primary-font-weight);
 font-size: var(--primary-font-size);
 line-height: 1.6;
+letter-spacing: 0.03em
+
 }
 
 /* Проєкти */
